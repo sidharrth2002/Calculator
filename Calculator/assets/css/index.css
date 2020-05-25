@@ -9,9 +9,8 @@ body {
 }
 
 #calculator-body {
-    width: 60%;
+    width: 40%;
     margin: 0 auto;
-    background-color: azure;
     overflow: auto;
 }
 
@@ -39,8 +38,9 @@ body {
 }
 
 .key {
-    margin: 0 auto;
-    background-color: white;
+    margin: 0px auto;
+    background-color: grey;
+    color: white;
     padding: 20px 10px;
     width: 20%;
     border-radius: 15px;

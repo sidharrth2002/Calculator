@@ -1,8 +1,8 @@
 let screen = elementSelector("#screen");
 let numbers = elementSelector(".num");
 let operators = elementSelector(".ops");
-let theNum = "";
-let oldNum = "";
+let theNum = "0";
+let oldNum = "0";
 let resultNum;
 let resetButton = elementSelector(".clear");
 let operator;
@@ -21,6 +21,10 @@ function setNum() {
     if (resultNum) {
         theNum = key;
         resultNum = "";
+    } else if (((screen.innerHTML.charAt(screen.innerHTML.length - 1) === ".")
+                && (key === "."))
+                || ((screen.innerHTML.includes(".")))
+                    && key === ".") {
     } else {
         theNum += key;
     }
@@ -55,6 +59,8 @@ function displayNum() {
 
 function reset() {
     screen.innerHTML = 0;
+    theNum = oldNum = "0";
+
 }
 
 for (let i = 0; i < numbers.length; ++i) {
