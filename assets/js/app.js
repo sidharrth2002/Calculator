@@ -72,7 +72,7 @@ showButton.onclick = () => {
 function reset() {
     screen.innerHTML = 0;
     theNum = oldNum = "0";
-
+    numdigits = 0;
 }
 
 for (let i = 0; i < numbers.length; ++i) {
