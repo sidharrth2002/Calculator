@@ -7,6 +7,7 @@ let resultNum;
 let resetButton = elementSelector(".clear");
 let operator;
 let equal = elementSelector(".equal");
+let numdigits = 0;
 
 function elementSelector(element) {
     if (element.charAt(0) === "#") {
@@ -25,9 +26,14 @@ function setNum() {
                 && (key === "."))
                 || ((screen.innerHTML.includes(".")))
                     && key === ".") {
+        return;
+    }
+    if (numdigits === 0) {
+        theNum = key;
     } else {
         theNum += key;
     }
+    numdigits += 1;
     screen.innerHTML = theNum;
 }
 

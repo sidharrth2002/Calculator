@@ -37,8 +37,12 @@ body {
     justify-content: space-between;
 }
 
+.row:nth-of-type(5).key {
+    justify-content: start;
+}
+
 .key {
-    margin: 0px auto;
+    margin: 0 auto;
     background-color: grey;
     color: white;
     padding: 20px 10px;
