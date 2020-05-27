@@ -8,6 +8,7 @@ let resetButton = elementSelector(".clear");
 let operator;
 let equal = elementSelector(".equal");
 let numdigits = 0;
+let showButton = elementSelector("#show");
 
 function elementSelector(element) {
     if (element.charAt(0) === "#") {
@@ -63,6 +64,11 @@ function displayNum() {
     screen.innerHTML = resultNum.toString();
 }
 
+showButton.onclick = () => {
+    showButton.style.display = "none";
+    document.getElementById("calculator-body").style.display = "block";
+}
+
 function reset() {
     screen.innerHTML = 0;
     theNum = oldNum = "0";
@@ -83,11 +89,3 @@ for (let i = 0; i < operators.length; ++i) {
 }
 
 equal[0].onclick = displayNum;
-
-//
-// for (let i = 0; i < buttons.length; ++i) {
-//     let input1, input2;
-//     let button = document.querySelector(buttons[i]);
-//     document.getElementById("screen").innerHTML = button;
-// }
-//
